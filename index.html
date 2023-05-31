@@ -39,6 +39,18 @@
 			</div>
 			<button id="login_button" class="btn btn-primary" onclick="addUser();">Log in</button>
 			<br><br>
+
+            function logout() {
+				localStorage.removeItem("user_name");
+				localStorage.removeItem("room_name");
+					window.location = "index.html";
+				}
+            
+				firebase.datebase().ref(sent).push ({
+				  name:user_name,
+				  message:msg,
+				  like:0
+				});
 		</div>
 	</center>
 </body>
